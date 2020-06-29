@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "c095051b-caa4-404a-982e-e6efb825b174",
+		"name": "Propiedades",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener propiedades administrador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/propiedad/administrador?userId=5ef95132e3be426840011448",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"propiedad",
+						"administrador"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "5ef95132e3be426840011448"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las propiedades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/propiedad/todas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"propiedad",
+						"todas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener propiedad querystring",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/propiedad/edit/administrador?userId=123&propiedadId=5ef9dd4ded37fc5340dd2b90",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"propiedad",
+						"edit",
+						"administrador"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "123"
+						},
+						{
+							"key": "propiedadId",
+							"value": "5ef9dd4ded37fc5340dd2b90"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear propiedad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Mi apartamento\",\r\n    \"type\":\"apartamento\",\r\n    \"address\":\"Calle 9 sur # 79C - 151\",\r\n    \"rooms\":3,\r\n    \"price\":2000,\r\n    \"image\":\"apartamento.jpg\",\r\n    \"userId\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/propiedad/new-apto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"propiedad",
+						"new-apto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener propiedad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/propiedad/5ef9dd4ded37fc5340dd2b90/administrador/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"propiedad",
+						"5ef9dd4ded37fc5340dd2b90",
+						"administrador",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -156,7 +156,7 @@ PropiedadCtrl.deletePropiedad = (req, res) => {
         if (Propiedades.user != userId) {
             // Para evitar que otro usuario elimine una Propiedades que no le pertenece.
             res.status(404).send({
-                message: "No autorizado", detail: err.errmsg
+                message: "No autorizado"
             });
         } else {
             Propiedad.findByIdAndDelete(req.params.id, (err, Propiedades) => {

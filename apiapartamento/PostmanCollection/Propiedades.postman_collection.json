@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/api/propiedad/administrador?userId=5ef95132e3be426840011448",
+					"raw": "http://localhost:4000/api/propiedad/administrador?userId=123",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -25,7 +25,7 @@
 					"query": [
 						{
 							"key": "userId",
-							"value": "5ef95132e3be426840011448"
+							"value": "123"
 						}
 					]
 				}
@@ -92,7 +92,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"Mi apartamento\",\r\n    \"type\":\"apartamento\",\r\n    \"address\":\"Calle 9 sur # 79C - 151\",\r\n    \"rooms\":3,\r\n    \"price\":2000,\r\n    \"image\":\"apartamento.jpg\",\r\n    \"userId\":\"123\"\r\n}",
+					"raw": "{\r\n    \"title\":\"Mi apartamento3\",\r\n    \"type\":\"apartamento\",\r\n    \"address\":\"Calle 9 sur3\",\r\n    \"rooms\":3,\r\n    \"price\":2000,\r\n    \"image\":\"apartamento.jpg\",\r\n    \"userId\":\"123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,7 +121,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/api/propiedad/5ef9dd4ded37fc5340dd2b90/administrador/123",
+					"raw": "http://localhost:4000/api/propiedad/5ef9ce56c4057c5694d971a4/administrador/5ef95132e3be426840011448",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -130,9 +130,66 @@
 					"path": [
 						"api",
 						"propiedad",
-						"5ef9dd4ded37fc5340dd2b90",
+						"5ef9ce56c4057c5694d971a4",
 						"administrador",
-						"123"
+						"5ef95132e3be426840011448"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar propiedad",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Mi apartamento\",\r\n    \"type\":\"apartamento\",\r\n    \"address\":\"Calle 9 sur # 79C - 152\",\r\n    \"rooms\":4,\r\n    \"price\":2000,\r\n    \"image\":\"apartamento.jpg\",\r\n    \"userId\":\"5ef95132e3be426840011448\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/propiedad/5ef9cf50bfc6304ce4018337",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"propiedad",
+						"5ef9cf50bfc6304ce4018337"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar propiedad",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/propiedad/5efa15a3ec78db1b145d586f?userId=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"propiedad",
+						"5efa15a3ec78db1b145d586f"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "123"
+						}
 					]
 				}
 			},

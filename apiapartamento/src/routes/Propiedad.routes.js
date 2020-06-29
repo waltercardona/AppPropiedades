@@ -26,9 +26,9 @@ router.get('/Propiedad/:id', renderPropiedad);
 router.get('/Propiedad/:id/administrador/:idAdministrador', renderPropiedadAdministrador);
 
 // Edit Propiedad
-router.put('/Propiedad/edit/:id', updatePropiedad);
+router.put('/Propiedad/:id', updatePropiedad);
 
 // Delete Propiedad
-router.delete('/Propiedad/delete/:id', deletePropiedad);
+router.delete('/Propiedad/:id', deletePropiedad);
 
 module.exports = router;
